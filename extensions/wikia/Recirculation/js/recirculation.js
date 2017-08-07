@@ -33,13 +33,8 @@ require([
 				id: 'LI_rail',
 				viewModule: 'ext.wikia.recirculation.views.premiumRail',
 				options: {
-					max: 5,
-					widget: 'wikia-rail',
-					source: 'fandom',
-					opts: {
-						resultType: 'cross-domain',
-						domainType: 'fandom.wikia.com'
-					}
+					max: 10,
+					widget: 'wikia-rail'
 				}
 			},
 			{
@@ -79,14 +74,6 @@ require([
 		// An array of promises to keep track of which views have completed rendering
 		completed = [],
 		liftigniterHelpers = {};
-
-	if (w.wgContentLanguage !== 'en') {
-		if (videosModule) {
-			videosModule('#recirculation-rail');
-		}
-		discussions();
-		return;
-	}
 
 	recircModules.forEach(function (recircModule) {
 		var deferred = $.Deferred();

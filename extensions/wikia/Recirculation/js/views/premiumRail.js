@@ -34,7 +34,7 @@ define('ext.wikia.recirculation.views.premiumRail', [
 	function renderTemplate(templateName) {
 		return function (data) {
 			data.title = data.title || $.msg('recirculation-fandom-title');
-			data.items = data.items.slice(0, 5);
+			data.items = data.items.slice(0, 10);
 			return utils.renderTemplate(templateName, data);
 		};
 	}

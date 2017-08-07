@@ -7,9 +7,9 @@ define('ext.wikia.recirculation.helpers.liftigniter', [
 
 	var helper = function (config) {
 		var defaults = {
-				max: 5,
-				width: 320,
-				height: 180,
+				max: 10,
+				width: 334,
+				height: 292,
 				flush: false
 			},
 			options = $.extend({}, defaults, config);
